@@ -1,9 +1,11 @@
 import os
 import sys
 
-def getfiles():
-    pdf_list = []
-    path = "./data"
+# Global data
+pdf_list = []
+path = "./data"
+
+def getfiles(pdf_list, path):
     for subdir, dirs, files in os.walk(path):
         for filename in files:
             filepath = subdir + os.sep + filename
@@ -11,5 +13,5 @@ def getfiles():
                 pdf_list.append(filepath)
     return pdf_list
 
-print(getfiles())
+print(getfiles(pdf_list, path))
 
