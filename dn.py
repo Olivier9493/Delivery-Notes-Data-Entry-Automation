@@ -1,6 +1,7 @@
 import os
 import sys
 
+
 # Global data
 pdf_list = []
 path = "./data"
@@ -13,5 +14,6 @@ def getfiles(pdf_list, path):
                 pdf_list.append(filepath)
     return pdf_list
 
-print(getfiles(pdf_list, path))
+if __name__ == '__main__':
+    print(getfiles(pdf_list, path))
 
